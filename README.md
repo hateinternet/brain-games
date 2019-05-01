@@ -21,3 +21,7 @@
 ## Play progression-game
 
 [![asciicast](https://asciinema.org/a/84gqvsK9kBaBOu5WuFxQFe8k4.svg)](https://asciinema.org/a/84gqvsK9kBaBOu5WuFxQFe8k4)
+
+## Play prime-game
+
+[![asciicast](https://asciinema.org/a/fCMN9dT7F3IlYeiXWFQu6hLwe.svg)](https://asciinema.org/a/fCMN9dT7F3IlYeiXWFQu6hLwe)
