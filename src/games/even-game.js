@@ -1,9 +1,10 @@
 
 import {
   getRandomNumber,
-  isEven,
   makeGame,
 } from '..';
+
+const isEven = num => num % 2 === 0;
 
 export default () => {
   const gameRules = 'Answer "yes" if number even otherwise answer "no".';

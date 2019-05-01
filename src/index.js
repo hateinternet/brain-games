@@ -12,21 +12,6 @@ const showGameRules = (gameRules) => {
   console.log(`${gameRules}\n`);
 };
 
-const getRandomNumber = (min = 0, max = 10) => Math.round(min + Math.random() * (max - min));
-
-const getRandomSign = () => {
-  switch (getRandomNumber(0, 2)) {
-    case 0:
-      return '+';
-    case 1:
-      return '-';
-    case 2:
-      return '*';
-    default:
-      return null;
-  }
-};
-
 const askQuestion = (num) => {
   console.log(`Question: ${num}`);
 };
@@ -41,7 +26,24 @@ const showLoseMessage = (username, userAnswer, rightAnswer) => {
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${username}!`);
 };
 
-const isEven = num => num % 2 === 0;
+const showCorrectMessage = () => {
+  console.log('Correct!');
+};
+
+const getRandomNumber = (min = 0, max = 10) => Math.round(min + Math.random() * (max - min));
+
+const getRandomSign = () => {
+  switch (getRandomNumber(0, 2)) {
+    case 0:
+      return '+';
+    case 1:
+      return '-';
+    case 2:
+      return '*';
+    default:
+      return null;
+  }
+};
 
 const makeGame = (gameRules, gameMechanics) => {
   showGreeting();
@@ -68,7 +70,7 @@ const makeGame = (gameRules, gameMechanics) => {
       return false;
     }
 
-    console.log('Correct!');
+    showCorrectMessage();
     return runGameRound(roundCounter + 1);
   };
 
@@ -78,7 +80,6 @@ const makeGame = (gameRules, gameMechanics) => {
 export {
   getRandomNumber,
   getRandomSign,
-  isEven,
   makeGame,
   showGreeting,
   getName,
