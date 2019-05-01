@@ -13,3 +13,7 @@
 ## Play calc-game
 
 [![asciicast](https://asciinema.org/a/tt5WKMd9uDqFTaRhjKdXFMYRh.svg)](https://asciinema.org/a/tt5WKMd9uDqFTaRhjKdXFMYRh)
+
+## Play gcd-game
+
+[![asciicast](https://asciinema.org/a/Yxpea5n9fgXJYGlH7Zpnk66St.svg)](https://asciinema.org/a/Yxpea5n9fgXJYGlH7Zpnk66St)

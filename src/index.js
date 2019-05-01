@@ -68,6 +68,7 @@ const makeGame = (gameRules, gameMechanics) => {
       return false;
     }
 
+    console.log('Correct!');
     return runGameRound(roundCounter + 1);
   };
 
