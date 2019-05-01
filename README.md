@@ -17,3 +17,7 @@
 ## Play gcd-game
 
 [![asciicast](https://asciinema.org/a/Yxpea5n9fgXJYGlH7Zpnk66St.svg)](https://asciinema.org/a/Yxpea5n9fgXJYGlH7Zpnk66St)
+
+## Play progression-game
+
+[![asciicast](https://asciinema.org/a/84gqvsK9kBaBOu5WuFxQFe8k4.svg)](https://asciinema.org/a/84gqvsK9kBaBOu5WuFxQFe8k4)

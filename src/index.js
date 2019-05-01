@@ -12,8 +12,8 @@ const showGameRules = (gameRules) => {
   console.log(`${gameRules}\n`);
 };
 
-const askQuestion = (num) => {
-  console.log(`Question: ${num}`);
+const askQuestion = (task) => {
+  console.log(`Question: ${task}`);
 };
 
 const getAnswer = () => readlineSync.question('Your answer: ');
