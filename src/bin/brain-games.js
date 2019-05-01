@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-import { greet, getNameSayHi } from '..';
+import { showGreeting, getName, sayHi } from '..';
 
-greet();
-getNameSayHi();
+showGreeting();
+const username = getName();
+sayHi(username);

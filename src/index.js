@@ -1,11 +1,85 @@
 import readlineSync from 'readline-sync';
 
-const greet = () => console.log('Welcome to the Brain Games!');
+const showGreeting = () => console.log('Welcome to the Brain Games!');
 
-const getNameSayHi = () => {
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!\n`);
-  return name;
+const getName = () => readlineSync.question('May I have your name? ');
+
+const sayHi = (username) => {
+  console.log(`Hello, ${username}!\n`);
 };
 
-export { greet, getNameSayHi };
+const showGameRules = (gameRules) => {
+  console.log(`${gameRules}\n`);
+};
+
+const getRandomNumber = (min = 0, max = 10) => Math.round(min + Math.random() * (max - min));
+
+const getRandomSign = () => {
+  switch (getRandomNumber(0, 2)) {
+    case 0:
+      return '+';
+    case 1:
+      return '-';
+    case 2:
+      return '*';
+    default:
+      return null;
+  }
+};
+
+const askQuestion = (num) => {
+  console.log(`Question: ${num}`);
+};
+
+const getAnswer = () => readlineSync.question('Your answer: ');
+
+const showWinMessage = (username) => {
+  console.log(`Congratulations, ${username}!`);
+};
+
+const showLoseMessage = (username, userAnswer, rightAnswer) => {
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${username}!`);
+};
+
+const isEven = num => num % 2 === 0;
+
+const makeGame = (gameRules, gameMechanics) => {
+  showGreeting();
+  showGameRules(gameRules);
+  const username = getName();
+  sayHi(username);
+
+  const numberOfRounds = 3;
+
+  const runGameRound = (roundCounter) => {
+    if (roundCounter === numberOfRounds) {
+      showWinMessage(username);
+      return true;
+    }
+
+    const gameVariables = gameMechanics();
+    const task = gameVariables.currentTask;
+    askQuestion(task);
+    const userAnswer = getAnswer();
+    const rightAnswer = gameVariables.correctAnswer;
+
+    if (userAnswer !== rightAnswer) {
+      showLoseMessage(username, userAnswer, rightAnswer);
+      return false;
+    }
+
+    return runGameRound(roundCounter + 1);
+  };
+
+  runGameRound(0);
+};
+
+export {
+  getRandomNumber,
+  getRandomSign,
+  isEven,
+  makeGame,
+  showGreeting,
+  getName,
+  sayHi,
+};
