@@ -30,20 +30,7 @@ const showCorrectMessage = () => {
   console.log('Correct!');
 };
 
-const getRandomNumber = (min = 0, max = 10) => Math.round(min + Math.random() * (max - min));
-
-const getRandomSign = () => {
-  switch (getRandomNumber(0, 2)) {
-    case 0:
-      return '+';
-    case 1:
-      return '-';
-    case 2:
-      return '*';
-    default:
-      return null;
-  }
-};
+const numberOfRounds = 3;
 
 const makeGame = (gameRules, gameMechanics) => {
   showGreeting();
@@ -51,23 +38,17 @@ const makeGame = (gameRules, gameMechanics) => {
   const username = getName();
   sayHi(username);
 
-  const numberOfRounds = 3;
-
   const runGameRound = (roundCounter) => {
     if (roundCounter === numberOfRounds) {
-      showWinMessage(username);
-      return true;
+      return showWinMessage(username);
     }
 
-    const gameVariables = gameMechanics();
-    const task = gameVariables.currentTask;
-    askQuestion(task);
+    const { currentTask, correctAnswer } = gameMechanics();
+    askQuestion(currentTask);
     const userAnswer = getAnswer();
-    const rightAnswer = gameVariables.correctAnswer;
 
-    if (userAnswer !== rightAnswer) {
-      showLoseMessage(username, userAnswer, rightAnswer);
-      return false;
+    if (userAnswer !== correctAnswer) {
+      return showLoseMessage(username, userAnswer, correctAnswer);
     }
 
     showCorrectMessage();
@@ -77,11 +58,4 @@ const makeGame = (gameRules, gameMechanics) => {
   runGameRound(0);
 };
 
-export {
-  getRandomNumber,
-  getRandomSign,
-  makeGame,
-  showGreeting,
-  getName,
-  sayHi,
-};
+export default makeGame;

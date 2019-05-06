@@ -1,9 +1,8 @@
 {
   "name": "brain-games-hateinternet",
-  "version": "3.3.4",
+  "version": "3.3.5",
   "description": "Set of simple logical games",
   "keywords": ["game", "games", "logic"],
-  "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
