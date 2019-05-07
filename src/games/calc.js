@@ -1,7 +1,10 @@
 import makeGame from '..';
 import getRandomNumber from '../utils';
 
-const getGameMechanics = (num1, num2) => {
+const gameDescription = 'What is the result of the expression?';
+const gameData = () => {
+  const num1 = getRandomNumber();
+  const num2 = getRandomNumber();
   switch (getRandomNumber(0, 2)) {
     case 0:
       return {
@@ -23,14 +26,6 @@ const getGameMechanics = (num1, num2) => {
   }
 };
 
-const gameDescription = 'What is the result of the expression?';
-const gameMechanics = () => {
-  const num1 = getRandomNumber();
-  const num2 = getRandomNumber();
-  const { question, correctAnswer } = getGameMechanics(num1, num2);
-  return { question, correctAnswer };
-};
-
 export default () => {
-  makeGame(gameDescription, gameMechanics);
+  makeGame(gameDescription, gameData);
 };

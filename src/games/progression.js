@@ -18,7 +18,7 @@ const getProgression = (firstElement, step) => {
 const generateQuestion = (removedIndex, arr) => arr.map((el, index) => (index === removedIndex ? '..' : el)).join(' ');
 
 const gameDescription = 'What number is missing in the progression?';
-const gameMechanics = () => {
+const gameData = () => {
   const firstElement = getRandomNumber(-100, 100);
   const step = getRandomNumber(-5, 5);
   const progression = getProgression(firstElement, step);
@@ -31,5 +31,5 @@ const gameMechanics = () => {
 };
 
 export default () => {
-  makeGame(gameDescription, gameMechanics);
+  makeGame(gameDescription, gameData);
 };
