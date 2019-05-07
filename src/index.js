@@ -1,59 +1,29 @@
 import readlineSync from 'readline-sync';
 
-const showGreeting = () => console.log('Welcome to the Brain Games!');
-
-const getName = () => readlineSync.question('May I have your name? ');
-
-const sayHi = (username) => {
-  console.log(`Hello, ${username}!\n`);
-};
-
-const showGameRules = (gameRules) => {
-  console.log(`${gameRules}\n`);
-};
-
-const askQuestion = (task) => {
-  console.log(`Question: ${task}`);
-};
-
-const getAnswer = () => readlineSync.question('Your answer: ');
-
-const showWinMessage = (username) => {
-  console.log(`Congratulations, ${username}!`);
-};
-
-const showLoseMessage = (username, userAnswer, rightAnswer) => {
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${username}!`);
-};
-
-const showCorrectMessage = () => {
-  console.log('Correct!');
-};
-
 const numberOfRounds = 3;
 
-const makeGame = (gameRules, gameMechanics) => {
-  showGreeting();
-  showGameRules(gameRules);
-  const username = getName();
-  sayHi(username);
+const makeGame = (gameDescription, gameMechanics) => {
+  console.log('Welcome to the Brain Games!');
+  console.log(gameDescription);
+  const username = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${username}!\n`);
 
   const runGameRound = (roundCounter) => {
     if (roundCounter === numberOfRounds) {
-      showWinMessage(username);
+      console.log(`Congratulations, ${username}!`);
       return;
     }
 
     const { currentTask, correctAnswer } = gameMechanics();
-    askQuestion(currentTask);
-    const userAnswer = getAnswer();
+    console.log(`Question: ${currentTask}`);
+    const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== correctAnswer) {
-      showLoseMessage(username, userAnswer, correctAnswer);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${username}!`);
       return;
     }
 
-    showCorrectMessage();
+    console.log('Correct!');
     runGameRound(roundCounter + 1);
   };
 
