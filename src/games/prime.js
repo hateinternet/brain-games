@@ -9,11 +9,11 @@ const isPrime = (num) => {
     return true;
   }
   const iter = (divider) => {
-    if (num % divider === 0) {
-      return false;
-    }
     if (divider >= num / 2) {
       return true;
+    }
+    if (num % divider === 0) {
+      return false;
     }
     return iter(divider + 1);
   };
@@ -22,9 +22,9 @@ const isPrime = (num) => {
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const gameMechanics = () => {
-  const currentTask = getRandomNumber(0, 100);
-  const correctAnswer = isPrime(currentTask) ? 'yes' : 'no';
-  return { currentTask, correctAnswer };
+  const question = getRandomNumber(0, 100);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
+  return { question, correctAnswer };
 };
 
 export default () => {

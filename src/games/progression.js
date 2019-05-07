@@ -15,24 +15,19 @@ const getProgression = (firstElement, step) => {
   return makeProgression(firstElement, []);
 };
 
-const getTask = (removedElementIndex, arr) => {
-  const newArr = arr.slice();
-  newArr[removedElementIndex] = '..';
-  const task = newArr.join(' ');
-  return task;
-};
+const generateQuestion = (removedIndex, arr) => arr.map((el, index) => (index === removedIndex ? '..' : el)).join(' ');
 
 const gameDescription = 'What number is missing in the progression?';
 const gameMechanics = () => {
   const firstElement = getRandomNumber(-100, 100);
   const step = getRandomNumber(-5, 5);
   const progression = getProgression(firstElement, step);
-  const removedElementIndex = getRandomNumber(0, maxPossibleIndex);
+  const removedIndex = getRandomNumber(0, maxPossibleIndex);
 
-  const currentTask = getTask(removedElementIndex, progression);
-  const correctAnswer = String(progression[removedElementIndex]);
+  const question = generateQuestion(removedIndex, progression);
+  const correctAnswer = String(progression[removedIndex]);
 
-  return { currentTask, correctAnswer };
+  return { question, correctAnswer };
 };
 
 export default () => {

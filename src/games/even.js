@@ -5,9 +5,9 @@ const isEven = num => num % 2 === 0;
 
 const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
 const gameMechanics = () => {
-  const currentTask = getRandomNumber(0, 100);
-  const correctAnswer = isEven(currentTask) ? 'yes' : 'no';
-  return { currentTask, correctAnswer };
+  const question = getRandomNumber(0, 100);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return { question, correctAnswer };
 };
 
 export default () => {

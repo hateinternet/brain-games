@@ -1,14 +1,23 @@
 import makeGame from '..';
 import getRandomNumber from '../utils';
 
-const getRandomSign = () => {
+const getGameMechanics = (num1, num2) => {
   switch (getRandomNumber(0, 2)) {
     case 0:
-      return '+';
+      return {
+        queston: `${num1} + ${num2}`,
+        correctAnswer: String(num1 + num2),
+      };
     case 1:
-      return '-';
+      return {
+        question: `${num1} - ${num2}`,
+        correctAnswer: String(num1 - num2),
+      };
     case 2:
-      return '*';
+      return {
+        question: `${num1} * ${num2}`,
+        correctAnswer: String(num1 * num2),
+      };
     default:
       return null;
   }
@@ -18,22 +27,8 @@ const gameDescription = 'What is the result of the expression?';
 const gameMechanics = () => {
   const num1 = getRandomNumber();
   const num2 = getRandomNumber();
-  const sign = getRandomSign();
-  const currentTask = `${num1} ${sign} ${num2}`;
-  let correctAnswer;
-  switch (sign) {
-    case '+':
-      correctAnswer = String(num1 + num2);
-      break;
-    case '-':
-      correctAnswer = String(num1 - num2);
-      break;
-    case '*':
-      correctAnswer = String(num1 * num2);
-      break;
-    // no default
-  }
-  return { currentTask, correctAnswer };
+  const { question, correctAnswer } = getGameMechanics(num1, num2);
+  return { question, correctAnswer };
 };
 
 export default () => {
