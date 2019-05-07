@@ -8,7 +8,7 @@ const gameData = () => {
   switch (getRandomNumber(0, 2)) {
     case 0:
       return {
-        queston: `${num1} + ${num2}`,
+        question: `${num1} + ${num2}`,
         correctAnswer: String(num1 + num2),
       };
     case 1:
