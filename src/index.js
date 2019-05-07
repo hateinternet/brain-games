@@ -40,7 +40,8 @@ const makeGame = (gameRules, gameMechanics) => {
 
   const runGameRound = (roundCounter) => {
     if (roundCounter === numberOfRounds) {
-      return showWinMessage(username);
+      showWinMessage(username);
+      return;
     }
 
     const { currentTask, correctAnswer } = gameMechanics();
@@ -48,11 +49,12 @@ const makeGame = (gameRules, gameMechanics) => {
     const userAnswer = getAnswer();
 
     if (userAnswer !== correctAnswer) {
-      return showLoseMessage(username, userAnswer, correctAnswer);
+      showLoseMessage(username, userAnswer, correctAnswer);
+      return;
     }
 
     showCorrectMessage();
-    return runGameRound(roundCounter + 1);
+    runGameRound(roundCounter + 1);
   };
 
   runGameRound(0);
