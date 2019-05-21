@@ -7,24 +7,24 @@ study in [hexlet.io](https://ru.hexlet.io/)
 
 ## Setup
 
-[![asciicast](https://asciinema.org/a/ZjgUaHKNwbQA5ATNtxeoyODgp.svg)](https://asciinema.org/a/ZjgUaHKNwbQA5ATNtxeoyODgp)
+[![asciicast](https://asciinema.org/a/c80rmi2kBXT2GeFywsxGwOWbr.svg)](https://asciinema.org/a/c80rmi2kBXT2GeFywsxGwOWbr)
 
 ## Play even-game
 
-[![asciicast](https://asciinema.org/a/UtVpVE2Ok0OS4kkyBGXbwCRwY.svg)](https://asciinema.org/a/UtVpVE2Ok0OS4kkyBGXbwCRwY)
+[![asciicast](https://asciinema.org/a/Clx90WHin1Lgj1M8K6PwHboAy.svg)](https://asciinema.org/a/Clx90WHin1Lgj1M8K6PwHboAy)
 
 ## Play calc-game
 
-[![asciicast](https://asciinema.org/a/tt5WKMd9uDqFTaRhjKdXFMYRh.svg)](https://asciinema.org/a/tt5WKMd9uDqFTaRhjKdXFMYRh)
+[![asciicast](https://asciinema.org/a/8rp1MydbYkUxEM0kxzIsrFOty.svg)](https://asciinema.org/a/8rp1MydbYkUxEM0kxzIsrFOty)
 
 ## Play gcd-game
 
-[![asciicast](https://asciinema.org/a/Yxpea5n9fgXJYGlH7Zpnk66St.svg)](https://asciinema.org/a/Yxpea5n9fgXJYGlH7Zpnk66St)
+[![asciicast](https://asciinema.org/a/OsNDsIgwT9KHqhQqfgo82cLqF.svg)](https://asciinema.org/a/OsNDsIgwT9KHqhQqfgo82cLqF)
 
 ## Play progression-game
 
-[![asciicast](https://asciinema.org/a/84gqvsK9kBaBOu5WuFxQFe8k4.svg)](https://asciinema.org/a/84gqvsK9kBaBOu5WuFxQFe8k4)
+[![asciicast](https://asciinema.org/a/xsn4kossfHfONCAwF1lthkUEX.svg)](https://asciinema.org/a/xsn4kossfHfONCAwF1lthkUEX)
 
 ## Play prime-game
 
-[![asciicast](https://asciinema.org/a/fCMN9dT7F3IlYeiXWFQu6hLwe.svg)](https://asciinema.org/a/fCMN9dT7F3IlYeiXWFQu6hLwe)
+[![asciicast](https://asciinema.org/a/IoPAOrRBuxCZginWyHwUTs6sj.svg)](https://asciinema.org/a/IoPAOrRBuxCZginWyHwUTs6sj)
