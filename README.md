@@ -1,6 +1,6 @@
 # Brain-games
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7d1016465d6cb696146a/maintainability)](https://codeclimate.com/github/hateinternet/project-lvl1-s486/maintainability)
 [![Build Status](https://travis-ci.org/hateinternet/project-lvl1-s486.svg?branch=master)](https://travis-ci.org/hateinternet/project-lvl1-s486)
 
 study in [hexlet.io](https://ru.hexlet.io/)
